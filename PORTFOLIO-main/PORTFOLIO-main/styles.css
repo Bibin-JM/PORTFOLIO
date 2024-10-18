@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li.active a {
+    background-color: #0e2bcc;
+    border-radius: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+footer p {
+    line-height: 1.6;
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #ECDFCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #333;
+    animation: Fade 5s forwards ;
+}
+
+@keyframes Fade {
+    0%{
+        opacity: 0;
+        transform: translateY(-10);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.info {
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .info h2 {
+        font-size: 24px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+}
